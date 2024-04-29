@@ -4,6 +4,10 @@ buildscript {
     mavenCentral()
     maven("https://oss.sonatype.org/content/repositories/snapshots")
   }
+
+  dependencies {
+    classpath("app.cash.molecule:molecule-gradle-plugin:1.4.2")
+  }
 }
 
 plugins {
