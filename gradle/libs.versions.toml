@@ -114,6 +114,7 @@ leakcanary = "com.squareup.leakcanary:leakcanary-android:2.14"
 
 junit = "junit:junit:4.13.2"
 robolectric = "org.robolectric:robolectric:4.12.1"
+turbine = "app.cash.turbine:turbine:1.1.0"
 
 showkase-runtime = { group = "com.airbnb.android", name = "showkase", version.ref = "showkase" }
 showkase-processor = { group = "com.airbnb.android", name = "showkase-processor", version.ref = "showkase" }
@@ -171,6 +172,7 @@ test = [
     "junit",
     "circuit-test",
     "truth",
+    "turbine",
 ]
 
 android-test = [
@@ -179,6 +181,7 @@ android-test = [
     "compose-testing-core",
     "compose-testing-junit4",
     "truth",
+    "turbine",
 ]
 
 android-debug-test = [

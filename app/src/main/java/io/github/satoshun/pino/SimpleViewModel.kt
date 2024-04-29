@@ -12,7 +12,7 @@ import kotlinx.coroutines.flow.Flow
 @Stable
 data class SimpleModel(
   val loading: Boolean,
-  val nane: String,
+  val name: String,
 )
 
 sealed interface SimpleEvent {
@@ -37,7 +37,7 @@ class SimpleViewModel : MoleculeViewModel<SimpleEvent, SimpleModel>() {
 
     return SimpleModel(
       loading = isLoading,
-      nane = name,
+      name = name,
     )
   }
 }

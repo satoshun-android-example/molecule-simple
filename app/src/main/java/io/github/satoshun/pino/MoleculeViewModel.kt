@@ -25,6 +25,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.StateFlow
+import org.jetbrains.annotations.VisibleForTesting
 
 abstract class MoleculeViewModel<Event, Model> : ViewModel() {
   private val scope = CoroutineScope(viewModelScope.coroutineContext + AndroidUiDispatcher.Main)
@@ -47,4 +48,10 @@ abstract class MoleculeViewModel<Event, Model> : ViewModel() {
 
   @Composable
   protected abstract fun models(events: Flow<Event>): Model
+
+  @Composable
+  @VisibleForTesting
+  internal fun testModels(): Model {
+    return models(events)
+  }
 }
