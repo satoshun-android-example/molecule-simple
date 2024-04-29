@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="account_title">設定</string>
+
+  <string name="account_basic_title">基本設定</string>
+  <string name="account_network_title">ネットワーク</string>
+  <string name="account_language">言語</string>
+  <string name="account_notification">通知</string>
+  <string name="account_theme">テーマ</string>
+  <string name="account_network">ネットワーク設定</string>
+
+  <string name="account_detail_title">詳細設定</string>
+  <string name="account_download">ダウンロード</string>
+  <string name="account_site">サイトの設定</string>
+  <string name="account_about">Pinoについて</string>
+
+  <string name="account_network_wifi">Wifiを使う</string>
+  <string name="account_network_bluetooth">Bluetoothを使う</string>
+  <string name="account_network_ethernet">有線LANを使う</string>
+  <string name="account_network_mobile">モバイルネットワークを使う</string>
+</resources>

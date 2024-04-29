@@ -1,0 +1,187 @@
+[versions]
+kotlin = "1.9.23"
+kotlincoroutines = "1.8.0"
+
+dagger = "2.51.1"
+
+composeCompiler = "1.5.12"
+
+accompanist = "0.34.0"
+agp = "8.3.2"
+ktor = "2.3.10"
+
+paparazzi = "1.3.3"
+showkase = "1.0.2"
+testParameterInjector = "1.16"
+
+ksp = "1.9.23-1.0.20"
+circuit = "0.20.0"
+composeTest = "1.6.6"
+junit = "1.1.5"
+uiautomator = "2.3.0"
+benchmarkMacroJunit4 = "1.2.4"
+baselineprofile = "1.2.4"
+profileinstaller = "1.3.1"
+
+[plugins]
+android-app = { id = "com.android.application", version.ref = "agp" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+dagger-hilt = { id = "com.google.dagger.hilt.android", version.ref = "dagger" }
+paparazzi = { id = "app.cash.paparazzi", version.ref = "paparazzi" }
+android-test = { id = "com.android.test", version.ref = "agp" }
+baselineprofile = { id = "androidx.baselineprofile", version.ref = "baselineprofile" }
+
+# Plugins defined by this project
+pino-android-application = { id = "pino.android.application", version = "unspecified" }
+pino-android-application-compose = { id = "pino.android.application.compose", version = "unspecified" }
+pino-android-library = { id = "pino.android.library", version = "unspecified" }
+pino-android-library-compose = { id = "pino.android.library.compose", version = "unspecified" }
+pino-android-dagger = { id = "pino.android.dagger", version = "unspecified" }
+
+[libraries]
+compose-bom = "androidx.compose:compose-bom:2024.04.01"
+compose-ui = { module = "androidx.compose.ui:ui" }
+compose-tooling = { module = "androidx.compose.ui:ui-tooling" }
+compose-runtime-core = { module = "androidx.compose.runtime:runtime" }
+compose-runtime-livedata = { module = "androidx.compose.runtime:runtime-livedata" }
+compose-foundation-core = { module = "androidx.compose.foundation:foundation" }
+compose-foundation-layout = { module = "androidx.compose.foundation:foundation-layout" }
+compose-animation = { module = "androidx.compose.animation:animation" }
+compose-material = { module = "androidx.compose.material3:material3" }
+compose-testing-core = { module = "androidx.compose.ui:ui-test", version.ref = "composeTest" }
+compose-testing-junit4 = { module = "androidx.compose.ui:ui-test-junit4", version.ref = "composeTest" }
+compose-testing-manifest = { module = "androidx.compose.ui:ui-test-manifest", version.ref = "composeTest" }
+
+compose-compiler = { module = "androidx.compose.compiler:compiler", version.ref = "composeCompiler" }
+
+compose-accompanist-swiperefresh = { module = "com.google.accompanist:accompanist-swiperefresh", version.ref = "accompanist" }
+compose-accompanist-systemuicontroller = { module = "com.google.accompanist:accompanist-systemuicontroller", version.ref = "accompanist" }
+
+compose-activity = "androidx.activity:activity-compose:1.9.0"
+compose-navigation = "androidx.navigation:navigation-compose:2.7.7"
+compose-constraint = "androidx.constraintlayout:constraintlayout-compose:1.0.1"
+android-hilt-navigation-compose = "androidx.hilt:hilt-navigation-compose:1.2.0"
+
+dagger-hilt-gradle = { module = "com.google.dagger:hilt-android-gradle-plugin", version.ref = "dagger" }
+dagger-hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "dagger" }
+dagger-hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "dagger" }
+
+android-core-ktx = "androidx.core:core-ktx:1.13.0"
+android-compat = "androidx.appcompat:appcompat:1.6.1"
+android-activity = "androidx.activity:activity-ktx:1.9.0"
+android-fragment-core = "androidx.fragment:fragment-ktx:1.6.2"
+android-fragment-testing = "androidx.fragment:fragment-testing:1.6.2"
+
+android-lifecycle-runtime = "androidx.lifecycle:lifecycle-runtime-ktx:2.7.0"
+android-lifecycle-compose = "androidx.lifecycle:lifecycle-runtime-compose:2.7.0"
+android-lifecycle-livedata = "androidx.lifecycle:lifecycle-livedata-ktx:2.7.0"
+android-lifecycle-viewmodel-core = "androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0"
+android-lifecycle-viewmodel-compose = "androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0"
+
+truth = "com.google.truth:truth:1.4.2"
+android-test-runner = "androidx.test:runner:1.5.2"
+android-test-espresso = "androidx.test.espresso:espresso-core:3.5.1"
+
+coil-compose = "io.coil-kt:coil-compose:2.6.0"
+
+kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
+kotlin-gradle = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+
+kotlin-coroutine-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlincoroutines" }
+kotlin-coroutine-ui = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlincoroutines" }
+
+kotlinx-serialization = "org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3"
+
+ktor-android = { module = "io.ktor:ktor-client-android", version.ref = "ktor" }
+ktor-okhttp = { module = "io.ktor:ktor-client-okhttp", version.ref = "ktor" }
+ktor-serialization = { module = "io.ktor:ktor-client-serialization", version.ref = "ktor" }
+ktor-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
+ktor-negotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
+
+circuit-core = { module = "com.slack.circuit:circuit-foundation", version.ref = "circuit" }
+circuit-runtime = { module = "com.slack.circuit:circuit-runtime", version.ref = "circuit" }
+circuit-test = { module = "com.slack.circuit:circuit-test", version.ref = "circuit" }
+circuit-codegen = { module = "com.slack.circuit:circuit-codegen", version.ref = "circuit" }
+circuit-codegenAnnotations = { module = "com.slack.circuit:circuit-codegen-annotations", version.ref = "circuit" }
+circuitx-gestureNav = { module = "com.slack.circuit:circuitx-gesture-navigation", version.ref = "circuit" }
+circuitx-overlays = { module = "com.slack.circuit:circuitx-overlays", version.ref = "circuit" }
+circuitx-android = { module = "com.slack.circuit:circuitx-android", version.ref = "circuit" }
+
+leakcanary = "com.squareup.leakcanary:leakcanary-android:2.14"
+
+junit = "junit:junit:4.13.2"
+robolectric = "org.robolectric:robolectric:4.12.1"
+
+showkase-runtime = { group = "com.airbnb.android", name = "showkase", version.ref = "showkase" }
+showkase-processor = { group = "com.airbnb.android", name = "showkase-processor", version.ref = "showkase" }
+
+testParameterInjector = { group = "com.google.testparameterinjector", name = "test-parameter-injector", version.ref = "testParameterInjector" }
+
+# Dependencies of the included build-logic
+android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
+kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+ksp-gradlePlugin = { group = "com.google.devtools.ksp", name = "com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
+ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junit" }
+uiautomator = { group = "androidx.test.uiautomator", name = "uiautomator", version.ref = "uiautomator" }
+benchmark-macro-junit4 = { group = "androidx.benchmark", name = "benchmark-macro-junit4", version.ref = "benchmarkMacroJunit4" }
+profileinstaller = { group = "androidx.profileinstaller", name = "profileinstaller", version.ref = "profileinstaller" }
+
+[bundles]
+kotlin-android = ["kotlin-stdlib", "kotlin-coroutine-core", "kotlin-coroutine-ui"]
+android-ui = [
+    "compose-ui",
+    "compose-compiler",
+    "compose-tooling",
+    "compose-runtime-core",
+    "compose-runtime-livedata",
+    "compose-foundation-core",
+    "compose-foundation-layout",
+    "compose-material",
+    "compose-animation",
+    "compose-activity",
+    "compose-navigation",
+    "android-hilt-navigation-compose",
+    "android-compat",
+    "android-core-ktx",
+    "android-fragment-core",
+    "android-activity",
+    "android-lifecycle-runtime",
+    "android-lifecycle-compose",
+    "android-lifecycle-livedata",
+    "android-lifecycle-viewmodel-core",
+    "android-lifecycle-viewmodel-compose",
+    "compose-constraint",
+    "compose-accompanist-swiperefresh",
+    "compose-accompanist-systemuicontroller",
+    "coil-compose",
+    "circuit-core",
+    "circuitx-gestureNav",
+    "circuitx-overlays",
+    "circuitx-android"
+]
+
+test = [
+    "android-test-runner",
+    "compose-testing-core",
+    "compose-testing-junit4",
+    "robolectric",
+    "junit",
+    "circuit-test",
+    "truth",
+]
+
+android-test = [
+    "android-test-runner",
+    "android-test-espresso",
+    "compose-testing-core",
+    "compose-testing-junit4",
+    "truth",
+]
+
+android-debug-test = [
+    "android-fragment-testing",
+    "compose-testing-manifest",
+]
