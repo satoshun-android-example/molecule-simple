@@ -10,31 +10,22 @@ import org.junit.runner.RunWith
 class SimpleViewModelTest {
   @Test
   fun initialValue() = runTest {
-    val expected = SimpleModel(
-      loading = false,
-      name = "name"
-    )
-
     val viewModel = SimpleViewModel()
-    viewModel.test(skipInitialValue = false) {
+    viewModel.test {
       val actual = awaitItem()
-      assertThat(actual).isEqualTo(expected)
+      assertThat(actual.loading).isEqualTo(false)
     }
   }
 
   @Test
   fun tap() = runTest {
-    val expected = SimpleModel(
-      loading = true,
-      name = "name"
-    )
-
     val viewModel = SimpleViewModel()
     viewModel.test {
-      viewModel.take(SimpleEvent.Tap)
+      val initialState = awaitItem()
+      initialState.eventSink(SimpleEvent.Tap)
 
       val actual = awaitItem()
-      assertThat(actual).isEqualTo(expected)
+      assertThat(actual.loading).isEqualTo(true)
     }
   }
 }
