@@ -16,6 +16,7 @@ data class SimpleModel(
 
 sealed interface SimpleEvent {
   data object Tap : SimpleEvent
+  data object UnTap : SimpleEvent
 }
 
 class SimpleViewModel : MoleculeViewModel<SimpleModel>() {
@@ -30,6 +31,9 @@ class SimpleViewModel : MoleculeViewModel<SimpleModel>() {
       eventSink = { event ->
         when (event) {
           SimpleEvent.Tap -> {
+            isLoading = !isLoading
+          }
+          SimpleEvent.UnTap -> {
             isLoading = !isLoading
           }
         }
