@@ -33,10 +33,10 @@ class SimpleViewModelTest {
   fun `tap and untap`() = runTest {
     val viewModel = SimpleViewModel()
     viewModel.test {
-      val initialState = awaitItem()
-      initialState.eventSink(SimpleEvent.Tap)
-      val newState = awaitItem()
-      newState.eventSink(SimpleEvent.UnTap)
+      var state = awaitItem()
+      state.eventSink(SimpleEvent.Tap)
+      state = awaitItem()
+      state.eventSink(SimpleEvent.UnTap)
 
       val actual = awaitItem()
       assertThat(actual.loading).isEqualTo(false)
