@@ -39,7 +39,7 @@ abstract class MoleculeViewModel<Model> : ViewModel() {
 
   @Composable
   @VisibleForTesting
-  internal fun testModels(): Model {
+  fun testModels(): Model {
     return models()
   }
 }
