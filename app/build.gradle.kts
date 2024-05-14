@@ -4,8 +4,7 @@ plugins {
   alias(libs.plugins.pino.android.dagger)
   alias(libs.plugins.android.app)
   alias(libs.plugins.baselineprofile)
-
-  id("app.cash.molecule")
+  alias(libs.plugins.molecule)
 }
 
 android {

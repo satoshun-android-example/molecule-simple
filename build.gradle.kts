@@ -4,10 +4,6 @@ buildscript {
     mavenCentral()
     maven("https://oss.sonatype.org/content/repositories/snapshots")
   }
-
-  dependencies {
-    classpath("app.cash.molecule:molecule-gradle-plugin:1.4.2")
-  }
 }
 
 plugins {
@@ -22,6 +18,7 @@ plugins {
   alias(libs.plugins.paparazzi) apply false
   alias(libs.plugins.android.test) apply false
   alias(libs.plugins.baselineprofile) apply false
+  alias(libs.plugins.molecule) apply false
 }
 
 allprojects {
